@@ -1,0 +1,277 @@
+@import "bourbon"
+@import "vars.sass"
+@import "reset.sass"
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+@import "app/libs/font-awesome/css/font-awesome.sass"
+	
+//Custom Styles Here
+.wrapper
+	background: fixed url(../img/bg.png) no-repeat 50% 50%
+	background-size: cover
+	min-height: 100vh
+
+.container
+	position: relative
+	max-width: 960px
+	margin: 0 auto
+	+cfix
+
+.header_logo
+	position: absolute
+	top: 23px
+	left: 10px
+	a
+		font-family: "Bebas"
+		font-size: 36px
+		color: $accent
+		text-decoration: none
+		span 
+			color: $accent_lighten
+
+.header_nav 
+	padding: 36px 0 25px
+	margin: 0
+	margin-right: 10px
+	display: grid
+	grid-template-columns: auto auto auto auto auto
+	grid-auto-flow: column
+	justify-content: end
+	list-style: none
+	+rmax(980)
+		float: right
+	li 
+		padding-left: 28px
+		a 	
+			font-family: "Bebas"
+			font-size: 16px
+			word-spacing: 2px
+			color: #b9b9b9
+			text-decoration: none
+			text-transform: uppercase
+		.active
+	 		color: $accent
+
+.full_width_section 
+	display: grid
+	grid-template-columns: 1fr 960px 1fr
+	margin-bottom: 24px
+	+rmax(970)
+		grid-template-columns: 100%
+	.col_center
+		margin: 0 10px
+		padding: 19px
+		background: $accent
+		+rmax(970)
+			width: 100%
+			margin: 0 auto
+			padding: 19px 29px
+		.main_page
+			font-family: "Bebas"
+			font-size: 24px
+			word-spacing: 2px
+			color: #fff
+			text-decoration: none
+	.col_left,
+	.col_right
+		background: $accent_lighten
+
+.article
+	display: block
+	float: left
+	width: 75%
+	padding-left: 10px
+	+rmax(970)
+		float: none
+		width: 100%
+	.post
+		position: relative
+		.post_img
+			img
+				display: block
+				max-width: 670px
+		.post_icon
+			width: 75px
+			height: 75px
+			line-height: 100px
+			text-align: center
+			background: $accent
+			position: absolute
+			top: 0
+			left: -85px
+			+rmax(1145)
+				display: none
+		.post_icon_3
+			.fa
+				font-size: 35px
+				color: #fff
+		.post_icon_4
+			padding: 4px 2px 0 0
+		.post_text
+			position: relative
+			padding: 24px 0px 45px 150px
+			max-width: 655px
+			.post_title
+				display: block
+				font-family: "Bebas"
+				font-size: 18px
+				word-spacing: 2px
+				color: $accent
+				text-decoration: none
+			.post_link
+				display: inline-block
+				padding: 9px 0 5px
+				font-family: "HelveticaNeue"
+				font-size: 12px
+				color: #a0a0a0
+				text-decoration: none
+			p
+				display: block
+				padding-top: 15px
+				font-family: "HelveticaNeue"
+				font-size: 12px
+				color: #414141
+				line-height: 1.6
+		.post_text_3
+			margin-bottom: 45px
+			padding: 10px 22px 16px 80px
+			background: #f1f1f1
+			max-width: 655px
+			p
+				font-size: 13px
+				line-height: 1.4
+				font-style: italic
+				color: #474747
+			.fa
+				position: absolute
+				top: 16px
+				left: 33px
+				font-size: 30px
+				color: $accent
+		.post_text_4
+			padding-left: 0
+			padding-top: 0
+		.post_stats
+			position: absolute
+			top: 21px
+			left: 0
+			.post
+				padding-bottom: 14px
+				a
+					display: inline-block
+					padding-bottom: 5px 
+					font-family: "Bebas"
+					font-size: 12px
+					text-decoration: none
+					color: $accent
+				span
+					font-family: "HelveticaNeue"
+					font-size: 12px
+					color: #bababa
+		.sep
+			margin-bottom: 24px
+	.paginator
+		margin: 45px 0
+		a
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			min-width: 27px
+			height: 27px
+			padding: 0 8px
+			font-family: "Bebas"
+			font-size: 14px
+			color: #fff
+			background: $accent_lighten
+			text-decoration: none
+		.active
+			background: $accent
+
+.sidebar
+	float: right
+	width: 25%
+	padding: 0 10px
+	+rmax(980)
+		display: none
+	.sb
+		width: 100%
+		position: relative
+		margin-bottom: 40px
+		a
+			display: inline-block
+			margin-bottom: 18px
+			font-family: "Bebas"
+			font-size: 14px
+			word-spacing: 2px
+			color: $accent
+			text-decoration: none
+		.links
+			a
+				font-family: "HelveticaNeue"
+				font-size: 12px
+				color: #464646
+				margin-bottom: 0
+		.sep
+			position: absolute
+			top: 0
+			right: 0
+		p
+			font-family: "HelveticaNeue"
+			font-size: 12px
+			color: #464646
+	.photo_gallery
+		.items	
+			display: inline-block
+			a
+				width: 52px
+				height: 52px
+				border: 1px solid $accent
+				background: $accent_lighten
+				margin-bottom: 1px
+
+.footer
+	.full_width_section
+		.col_center
+			padding-top: 40px
+			.block
+				float: left
+				padding-left: 35px
+				margin-bottom: 80px
+				+rmax(970)
+					float: none
+					padding: 0
+			.block_1, .block_3
+				width: 33%
+			.block_2
+				width: 34%
+			.title
+				display: inline-block
+				font-family: "Bebas"
+				font-size: 20px
+				word-spacing: 2px
+				color: #fff
+				text-decoration: none
+				margin-bottom: 10px
+			p
+				font-family: "HelveticaNeue"
+				font-size: 12px
+				color: #fff
+				padding-top: 15px
+			a
+				color: #f1b09b
+				text-decoration: none
+			span
+				display: inline-block
+				font-family: "HelveticaNeue"
+				font-size: 12px
+				color: #f1b09b
+				padding: 6px 0 4px
+			
+
+
+				
+		
+	
+//ALWAYS END
+@import "media"
