@@ -1,0 +1,56 @@
+body {
+    background: #5100CC url(img/pirates1990invert.png) no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	/*background-position: left center;*/
+	}
+
+.navigation ul li {
+	transform: rotate(0deg) scale(0.45);
+	background-color: #CC9854;
+	background: radial-gradient(ellipse, #CC9854, #CC9854, #B8751D);
+	color: black;
+	padding: 15px;
+	margin: 40px 0 -70px -150px;
+	border: 7px solid #323232;
+	border-radius: 10px;
+	box-shadow: 15px 15px 55px black; 
+	width: 500px;
+	font-family: tempus sans itc;
+	font-size: 50px;
+	font-weight: 600;
+	text-align: center;
+	display: block;
+	cursor: pointer;
+	position: relative;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: black;
+}
+
+.navigation a:hover {
+	color: white;
+}
+
+form {
+	margin-left: 40px;
+	margin-top: 220px;
+}
+
+/*li a:hover {
+	color: white;
+}*/
+
+/* .count {
+	height: 50px;
+	width: 172px;
+} */
+
+/* .navigation>li>a:focus, .navigation>li>a:hover {
+	color: white;
+} */
+
+
+
